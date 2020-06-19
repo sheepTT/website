@@ -1,0 +1,207 @@
+<!-- 粒子背景插件使用见网址：https://github.com/jnicol/particleground#dotcolor -->
+<!doctype html>
+<html lang="en" class="no-js">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>linhongcun</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/loginStyle.css" />
+
+        <script type='text/javascript' src='js/jquery.particleground.js'></script>
+        <script type='text/javascript' src='js/demo.js'></script>
+        <!-- 注册登陆界面转换事件 -->
+        <script type='text/javascript' src='js/change.js'></script>
+        
+
+        <!-- 设置背景音乐自动播放 -->
+        <script>
+            function toggleSound() {
+                var music = document.getElementById("bgmusic");//获取ID  
+                console.log(music);
+                console.log(music.paused);
+                if (music.paused) { //判读是否播放  
+                    music.paused=false;
+                    music.play(); //没有就播放 
+                }
+            }
+            setInterval("toggleSound()",1);
+        </script>
+
+        <script>
+            //正则表达式在JS中的使用参考： https://www.cnblogs.com/luoyanan/p/9134006.html
+            
+            // 设置全局标志变量
+            flag1=flag2=flag3=flag4=flag5=0
+            //判断用户名是否写正确
+            function conformUserName(){
+                //设置正则表达式
+                //g(全局匹配，找到第一个匹配项后还会继续往后查找)，i(不区分大小写)，m(多行模式，找完一行后还会找下一行)
+                var pattern1=/^[a-zA-Z][a-zA-Z0-9_]{4,15}$/g
+
+                var userName=document.getElementById('userName').value
+                var span1=document.getElementById('spanOne')
+                //test方法用于检测一个字符串是否匹配某个模式,参考网址：https://www.runoob.com/jsref/jsref-test-regexp.html
+                var flag=pattern1.test(userName)
+                if (flag==false) {
+                    //显示spanOne
+                    span1.style.display="inline"
+                }
+                else{
+                    span1.style.display="none"
+                    flag1=1
+                }
+            }
+
+
+            // 判断密码非空
+            function firstInput(){
+                var input2=document.getElementById('userPassword')
+                var span2=document.getElementById('spanTwo')
+                if (input2.value) {
+                    //隐藏spanTwo，未输密码时spanTwo默认显示
+                    span2.style.display="none"
+                    flag2=1
+                }
+                else{
+                    span2.style.display="inline"
+                }
+            }
+
+
+            //判断二次密码是否一致
+            function SecondInput(){
+                //获取第二、三个input
+                var input2=document.getElementById('userPassword')
+                var input3=document.getElementById('conformUserPassword')
+                var span3=document.getElementById('spanThree')
+
+                var onePassword=input2.value
+                var twoPassword=input3.value
+                if (onePassword!=twoPassword) {
+                    //显示spanThree
+                    span3.style.display="inline"
+                }
+                else{
+                    span3.style.display="none"
+                    flag3=1
+                }
+            }
+
+
+            //判断用户邮箱信息填写是否正确
+            function conformUserEmile(){
+                //设置正则表达式
+                var pattern2=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g
+
+                var userEmile=document.getElementById('emile').value
+                var span4=document.getElementById('spanFour')
+                var flag=pattern2.test(userEmile)
+                if (flag==false) {
+                    //显示spanFour
+                    span4.style.display="inline"
+                }
+                else{
+                    span4.style.display="none"
+                    flag4=1
+                }
+            }
+
+
+            //判断用户电话信息填写是否正确
+            function conformUserTelNumber(){
+                //电话号码为1开头后面为中括号中任意一个，最后9位随机数，总共11位
+                var pattern3=/^1[3456789]\d{9}$/g
+
+                var userNumber=document.getElementById('telNumber').value
+                var span5=document.getElementById('spanFive')
+                var flag=pattern3.test(userNumber)
+                if (flag==false) {
+                    //显示spanFive
+                    span5.style.display="inline"
+                }
+                else{
+                    span5.style.display="none"
+                    flag5=1
+                }
+            }
+
+
+            //判断所有信息是否填写正确
+            function succeed(){
+                //获取两个span判断其是否均为none类型，即密码设置是否正确
+                if (flag1==flag2==flag3==flag4==flag5==1) {
+                    alert("注册成功，欢迎加入我们！")
+                }
+                else{
+                    alert("请正确填写信息呦~")
+                }
+            }
+        </script>
+    </head>
+
+    <body onload="toggleSound()">
+        <audio src="music/BLUE.mp3" id="bgmusic">您的浏览器不支持 audio 标签</audio>
+        <!--背景-->
+        <div id="particles">
+            <!--内容-->
+            <div id="intro">
+                <div id="headImg"><img src="img/homepage.png" alt=""></div>
+                <div id="abc">
+                    <!-- action属性：将表单提交到# method属性：提交方式为get，还有一种方式是post -->
+                    <h2>欢 迎 光 临</h2>
+                    <div id="formHeadDiv">
+                        <a href="javascript:void()" class="astyle aone" onclick="loginFunction()" style="color: #7FFFD4;font-size:20px">注册</a>
+                        <span id="split"></span>
+                        <a href="javascript:void()" class="astyle atwo" onclick="debark()" style="color: white">登陆</a>
+                    </div>
+                    <form action="#" method="get" id="formOne">
+                        <ul>
+                            <li>用户名</li>
+                            <li>输入密码</li>
+                            <li>确认密码</li>
+                            <li>邮箱地址</li>
+                            <li>电话</li>
+                        </ul>
+                        <div id="formDiv">
+                            <!-- onblur 在元素失去焦点时触发 -->
+                            <p>
+                                <!-- title用于提示用户信息 -->
+                                <input type="text" id="userName" onblur="conformUserName()" title="以字母开头,允许5-16个字节，允许字母数字下划线" placeholder="起一个好听的名字吧~">
+                                <span class="allStyle Aspan" id="spanOne">字母开头5-16个字节允许数字下划线</span>
+                            </p>
+
+                            <p>
+                                <input type="password" id="userPassword" onblur="firstInput()" title="没有格式要求" placeholder="我眼睛已经闭上啦">
+                                <span class="allStyle aspan" id="spanTwo">您还没有输入密码哦~</span>
+                            </p>
+
+                            <p>
+                                <input type="password" id="conformUserPassword" onblur="SecondInput()" placeholder="我眼睛还没睁开哦">
+                                <span class="allStyle bspan" id="spanThree">咦？和第一次输入的密码不一样!</span>
+                            </p>
+
+                            <p>
+                                <input type="text" id="emile" onblur="conformUserEmile()" title="邮箱格式如：abc@126.com" placeholder="abc@126.com">
+                                <span class="allStyle cspan" id="spanFour">请根据邮箱格式填写</span>
+                            </p>
+
+                            <p>
+                                <input type="text" id="telNumber" onblur="conformUserTelNumber()" title="1开头后面为中括号中任意一个，最后9位随机数，总共11位" placeholder="悬停可显示格式~">
+                                <span class="allStyle dspan" id="spanFive">请根据号码格式填写</span>
+                            </p>
+
+                            <button onclick="succeed()" id="loginButton"><span id="buttonSpan">提交</span></button>
+                        </div>
+                    </form>
+                    <div id="formBottomDiv">
+                        <p class="formBottomP">© 2019-2020 李明特 版权所有</p>
+                        <p class="formBottomP">苏A6-211808553-8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

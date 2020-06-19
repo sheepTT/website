@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: url('../img/3786887.jpg') no-repeat;
+}
+
+.menu-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 55px;
+    z-index: 10;
+    transition: width 0.2s linear;
+    -webkit-transition: width 0.2s linear;
+    transform: translateZ(0) scale(1, 1);
+    -webkit-transform: translateZ(0) scale(1, 1);
+    background-color: #f5f5f5;
+    box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.menu-wrap:hover {
+    width: 250px;
+    z-index: 10;
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    bottom: 80px;
+    width: 250px;
+    overflow-y: auto;
+}
+
+.menu li {
+    height: 42px;
+    line-height: 42px;
+    transition: all .14s linear;
+}
+
+.dowebok li:hover {
+    background-color: #00bbbb;
+}
+
+.menu li:hover a {
+    color: #fff;
+}
+
+.menu a {
+    display: block;
+    color: #8a8a8a;
+    border-top: 1px solid #e9e9e9;
+}
+
+.menu p {
+    display: inline-block;
+    width: 55px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.menu span {
+    font-size: 14px;
+}
+
+/*设置头部样式*/
+#head{
+    width: 1225px;
+    height: 50px;
+    float: right;
+    z-index: 1;
+    /*border: 1px solid red;*/
+    background-color: #5F6368;
+}
+#headLeftDiv{
+    width: 360px;
+    height: 45px;
+    position: relative;
+    left: 30px;
+    /*border: 1px solid red;*/
+}
+#head img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    border-radius: 50%;
+}
+#headLeftDiv img:hover{
+    -webkit-box-shadow:0 0 10px #00BBBB;
+    box-shadow:0 0 10px #00BBBB;
+}
+#head .userName>a{
+    position: absolute;
+    top: 14px;
+    left: 60px;
+    color: #F5F5F5;
+}
+#head .userName>a:hover{
+    /*transform: scale(1.1);*/
+    color: #99D8F8;
+}
+#bgmusic{
+    width: 270px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    left: 165px;
+}
+
+/*设置头部样式*/
+#headRightDiv{
+  width: 450px;
+  height: 45px;
+  position: absolute;
+  top: 1px;
+  right: 10px;
+}
+#headRightDiv ul li{
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    list-style-type: none;
+    height: 43px;
+    line-height: 45px;
+    margin-left: 33px;
+    transition:all .3s;
+}
+#headRightDiv ul li:hover{
+    transform: translateY(-7px);
+}
+#headRightDiv ul li span{
+    display: inline-block;
+    height: 43px;
+    letter-spacing: 2px;
+    color: #FFF;
+}
+#headRightDiv ul li span:hover{
+    color: #99D8FB;
+}
+#headRightDiv .underlineSpan{
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #DEE1E6;
+}
+#headRightDiv .zhuce{
+    position: absolute;
+    top: 38px;
+    left: 30px;
+}
+#headRightDiv .rizhi{
+    position: absolute;
+    top: 38px;
+    left: 107px;
+}
+#headRightDiv .xiangce{
+    position: absolute;
+    top: 38px;
+    left: 183px;
+}
+#headRightDiv .liuyanban{
+    width: 70px;
+    position: absolute;
+    top: 38px;
+    left: 262px;
+}
+#headRightDiv .gerendang{
+    width: 70px;
+    position: absolute;
+    top: 38px;
+    left: 361px;
+}
+
+
+/*设置轮播图样式*/
+#banner{
+    height: 444px;
+    width: 1225px;
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    /*border: 1px solid red;*/
+}
+#banner .swiper-container div img{
+    width: 1225px;
+    height: 500px;
+}
+
+
+
+/*设置待办事项样式*/
+#schedule{
+    width: 390px;
+    height: 640px;
+    position: absolute;
+    top: 600px;
+    left: 90px;
+    background-color:#FF6666;
+    -webkit-box-shadow: -20px -20px 1px #E8E2E2;
+    box-shadow: -20px -20px 1px #E8E2E2;
+}
+#schedule #scheduleHead{
+    margin-left: 45px;
+    margin-top: 20px;
+    width: 300px; 
+}
+#schedule #scheduleHead h1{
+    margin-bottom: 10px;
+    color: white;
+}
+#schedule #scheduleHead p{
+    font-size: 15px;
+    color: white;
+}
+#schedule #scheduleSpan{
+    display: inline-block;
+    width: 340px;
+    height: 2px;
+    margin-left: 24px;
+    background-color: #FF9494;
+}
+#schedule #scheduleList ul{
+    list-style: none;
+}
+#schedule #scheduleList ul>li{
+    width: 390px;
+    height: 60px;
+    position: relative;
+    margin-top: 10px;
+    background-color: #FF7676;
+}
+#schedule #scheduleList ul>li>p{
+    color: white;
+    width: 150px;
+    font-size: 20px;
+    line-height: 60px;
+    margin-left: 30px;
+}
+#schedule #scheduleList .liDiv{
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    top: 21px;
+    right: 20px;
+}
+#schedule #scheduleList .liDiv .delete{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 25px;
+}
+#schedule #scheduleList .liDiv .delete img{
+    width: 20px;
+    height: 20px;
+}
+#scheduleAdd{
+    margin-top: 50px;
+}
+#scheduleAdd h2{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+#scheduleAdd input{
+    width: 240px;
+    margin-left: 20px;
+    outline-style: none;
+    border: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    text-indent: 15px;
+}
+#scheduleAdd #scheduleAddSpan{
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    color: white;
+    margin-left: 15px;
+    text-align: center;
+    line-height: 38px;
+    border: 1px dashed #FF9494;
+}
+#scheduleAdd #scheduleAddSpan:hover{
+    border: 1px dashed #000000;
+}
+
+
+/*设置日志部分样式*/
+#mylog{
+    width: 740px;
+    position:relative;
+    top: 600px;
+    left: 500px;
+    border-radius: 10px;
+    background-color: #FBF3C4;
+}
+.mylogDiv_allStyle{
+    width: 700px;
+    height: 350px;
+    position: relative;
+    margin: 0 auto;
+}
+.mylogheadDiv{
+    height: 50px;
+}
+#mylogNav{
+    display: inline-block;
+    width: 66px;
+    height: 35px;
+    font-size: 16px;
+    color: #AD747B;
+    position: absolute;
+    top: 10px;
+    border-bottom: 4px solid #AD747B;
+}
+#logSurbase{
+    display: inline-block;
+    width: 615px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 66px;
+    background-color: #C08A8A;
+}
+.log_headimg{
+    width: 65px;
+    height: 65px;
+    margin-top: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 5px #5F6368;
+    box-shadow: 0 0 5px #5F6368;
+}
+.log_headimg img{
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+}
+.log_mainRight{
+    width: 500px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 120px;
+    border: 1px solid #C08A8A;
+}
+.log_mainRight:hover{
+    -webkit-box-shadow: -5px -5px 5px #86E3CE;
+    box-shadow: -5px -5px 5px #86E3CE;
+}
+.mainRightOne{
+    top: 15px;
+}
+.mainRightTwo{
+    top: 25px;
+}
+.mainRightThree{
+    top: 21px;
+}
+.log_name{
+    display: inline-block;
+    width: 80px;
+    height: 23px;
+    margin-bottom: 5px;
+    color: #C08A8A;
+}
+.log_name:hover{
+    box-sizing: border-box;
+    border-bottom: 1px solid #AD747B;
+    color: #AD747B;
+}
+#log_img img{
+    width: 150px;
+    height: 190px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.log_mainRight .footSpan{
+    display: inline-block;
+    width: 120px;
+    height: 20px;
+    color: #A2998A;
+}
+.log_mainRight .footP{
+    width: 110px;
+    height: 20px;
+    color: #A2998A;
+}
+
+#notesh1{
+    position: absolute;
+    top: 1260px;
+    left: 175px;
+    color: #F8EEC4;
+}
+
+
+/*设置页面底部样式*/
+#footer{
+    width: 1223px;
+    height: 50px;
+    float: right;
+    z-index: 1;
+    position: absolute;
+    top: 1780px;
+    left: 56px;
+    background-color: #3C3C3C;
+}
+#footerwenzi{
+    width: 225px;
+    height: 50px;
+    margin: 0 auto;
+}
+#footerwenzi p{
+    height: 50px;
+    color: #656460;
+    line-height: 50px;
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>211808553李明特</title>
+    
+    <!-- 引用图标插件。参考网址：https://www.runoob.com/font-awesome/fontawesome-tutorial.html -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/homepagestyle.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/liMarquee.css">
+    
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/scheduleTable.js"></script>
+    <script src="js/jquery.liMarquee.js"></script>
+    
+    <!-- 设置学习笔记部分样式 -->
+    <style>
+        .notes { 
+            width: 330px; 
+            height: 425px; 
+            position: absolute;
+            top: 1310px;
+            left: 110px;
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: #86E3CE;
+        }
+        .notes:hover{
+            background-color: #86E3CE;
+        }
+        .notes ul { 
+            margin: 0; 
+            line-height: 30px;
+        }
+        .notes ul li{
+            color: #478BA1;
+            margin-left: 50px;
+        }
+        .notes a { 
+            color: white; 
+            text-decoration: none;
+        }
+        .notes a:hover { 
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 左侧导航栏 -->
+    <nav class="menu-wrap">
+        <div class="menu dowebok">
+            <ul>
+                <li>
+                    <a href="login.html" title="点击跳转至注册界面">
+                        <p class="fa fa-user fa-lg"></p>
+                        <span class="nav-text">登录/注册</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mailto:1071252445@qq.com" title="点击联系李明特的邮箱">
+                        <p class="fa fa-envelope-o fa-lg"></p>
+                        <span class="nav-text">联系</span>
+                    </a>
+                </li>
+                </li>
+                <li class="darkerlishadow">
+                    <a href="https://www.sina.com.cn/">
+                        <p class="fa fa-clock-o fa-lg"></p>
+                        <span class="nav-text">新闻</span>
+                    </a>
+                </li>
+
+                <li class="darkerli">
+                    <a href="https://www.runoob.com/">
+                        <p class="fa fa-desktop fa-lg"></p>
+                        <span class="nav-text">技术</span>
+                    </a>
+                </li>
+                <li class="darkerli">
+                    <a href="https://www.mafengwo.cn/">
+                        <p class="fa fa-plane fa-lg"></p>
+                        <span class="nav-text">旅行</span>
+                    </a>
+                </li>
+                <li class="darkerli">
+                    <a href="https://www.taobao.com/">
+                        <p class="fa fa-shopping-cart"></p>
+                        <span class="nav-text">购物</span>
+                    </a>
+                </li>
+                <li class="darkerli">
+                    <a href="https://www.bilibili.com/">
+                        <p class="fa fa-microphone fa-lg"></p>
+                        <span class="nav-text">娱乐</span>
+                    </a>
+                </li>
+                <li class="darkerli">
+                    <a href="http://www.4399.com/">
+                        <p class="fa fa-gamepad fa-lg"></p>
+                        <span class="nav-text">游戏</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://blog.csdn.net/">
+                        <p class="fa fa-lightbulb-o fa-lg"></p>
+                        <span class="nav-text">博客</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 头部 -->
+    <div id="head">
+        <div id="headLeftDiv">
+            <audio id="bgmusic" title="点击播放背景音乐" src="music/may.mp3" controls="controls" loop="loop"></audio>
+            <img title="头像" class="userImg" src="img/userImg.jpg" alt="">
+            <span title="注销" style='cursor:pointer;' class="userName"><a href="404error.html">约等于无忧</a></span>
+        </div>
+        <div id="headRightDiv">
+            <ul>
+                <li><span style='cursor:pointer;'>日志</span></li>
+                <li><span style='cursor:pointer;'>娱乐</span></li>
+                <li><span style='cursor:pointer;'>相册</span></li>
+                <li><span style='cursor:pointer;'>留言板</span></li>
+                <li><span style='cursor:pointer;'>个人档</span></li>
+            </ul>
+            <span class="underlineSpan zhuce"></span>
+            <span class="underlineSpan rizhi"></span>
+            <span class="underlineSpan xiangce"></span>
+            <span class="underlineSpan liuyanban"></span>
+            <span class="underlineSpan gerendang"></span>
+        </div>
+    </div>
+
+
+    <!-- 轮播图 -->
+    <div id="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/0.jpg" width="500" height="500">       
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/1.jpg" width="500" height="500">       
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/2.jpg" width="500" height="500">       
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/3.jpg" width="500" height="500">      
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/4.jpg" width="500" height="500">      
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/5.jpg" width="500" height="500">      
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div> 
+            <div class="swiper-button-prev"></div>  <!-- 上一页 -->
+            <div class="swiper-button-next"></div>  <!-- 下一页 -->
+        </div>
+    </div>
+    
+    
+
+    <!-- 待办事项部分 -->
+    <div id="schedule">
+        <div id="scheduleHead">
+            <h1>待办事项</h1>
+            <p>李明特Fighting 冲鸭冲鸭冲鸭！</p>
+        </div>
+        <span id="scheduleSpan"></span>
+        <div id="scheduleList">
+            <ul id="scheduleul">
+                <li>
+                    <p>背25个单词</p>
+                    <div class="liDiv liDivone">
+                        <div class="delete checkbox" onclick="checkBoxone()">
+                            <img class="checkboximg" src="img/checkboxno.png" style='cursor:pointer;' alt="">
+                        </div>
+                        <div class="delete" onclick="deleteone()">
+                            <img class="deleteimg" src="img/garbage.png" style='cursor:pointer;' alt="">            
+                        </div>                        
+                    </div>
+                </li>
+                <li>
+                    <p>看python慕课</p>
+                    <div class="liDiv liDivtwo">
+                        <div class="delete checkbox" onclick="checkBoxtwo()">
+                            <img class="checkboximg" src="img/checkboxno.png" style='cursor:pointer;' alt="">
+                        </div>
+                        <div class="delete" onclick="deletetwo()">
+                            <img class="deleteimg" src="img/garbage.png" style='cursor:pointer;' alt="">            
+                        </div>                        
+                    </div>
+                </li>
+                <li>
+                    <p>健身45分钟</p>
+                    <div class="liDiv liDivthree">
+                        <div class="delete checkbox" onclick="checkBoxthree()">
+                            <img class="checkboximg" src="img/checkboxno.png" style='cursor:pointer;' alt="">
+                        </div>
+                        <div class="delete" onclick="deletethree()">
+                            <img class="deleteimg" src="img/garbage.png" style='cursor:pointer;' alt="">            
+                        </div>                        
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="scheduleAdd">
+            <h2>添加待办事项</h2>
+            <input type="text" class="addinput">
+            <span id="scheduleAddSpan" style='cursor:pointer;' onclick="addSchedule()">
+                添加
+            </span>
+        </div>
+    </div>
+
+
+
+    <!-- 日志部分 -->
+    <div id="mylog">
+        <div class="mylogDiv_allStyle mylogheadDiv">
+            <span id="mylogNav">我的日志</span>
+            <span id="logSurbase"></span>
+        </div>
+
+        <div id="log_main" class="mylogDiv_allStyle">
+            <div class="log_headimg">
+                <img src="img/userImg.jpg" alt="">
+            </div>
+            <div class="log_mainRight mainRightOne">
+                <span class="log_name" style='cursor:pointer;'>约等于无忧</span>
+                <p>不是吧 不是吧 皮蛋被顶下去了！</p>
+                <div id="log_img">
+                    <img src="img/psc1.png" alt="">
+                    <img src="img/psc2.png" alt="">
+                </div>
+                <span class="footSpan">昨天22:18</span>
+                <p class="footP">来自小米8(4G)</p>
+            </div>
+        </div>
+
+        <div id="log_main" class="mylogDiv_allStyle">
+            <div class="log_headimg">
+                <img src="img/userImg.jpg" alt="">
+            </div>
+            <div class="log_mainRight mainRightTwo">
+                <span class="log_name" style='cursor:pointer;'>约等于无忧</span>
+                <p>可是我真的好渴啊。。。</p>
+                <div id="log_img">
+                    <img src="img/psc3.png" alt="">
+                </div>
+                <span class="footSpan">2020年5月29日</span>
+                <p class="footP">来自小米8(4G)</p>
+            </div>
+        </div>
+        
+        <div id="log_main" class="mylogDiv_allStyle">
+            <div class="log_headimg">
+                <img src="img/userImg.jpg" alt="">
+            </div>
+            <div class="log_mainRight mainRightThree">
+                <span class="log_name" style='cursor:pointer;'>约等于无忧</span>
+                <p>这个连睡觉都撑脸的姑奶奶从来只让我悬空睡</p>
+                <div id="log_img">
+                    <img src="img/psc4.png" alt="">
+                    <img src="img/psc5.png" alt="">
+                </div>
+                <span class="footSpan">2020年4月28日</span>
+                <p class="footP">来自小米8(4G)</p>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 id="notesh1">前端学习笔记</h1>
+    <!-- 前端学习笔记部分 -->
+    <div class="notes">
+        <ul>
+            <li>
+                <a href="notes/杂记.pdf">杂记.pdf</a>
+            </li>
+            <li>
+                <a href="notes/超链接和插入图片.pdf">超链接和插入图片.pdf</a>
+            </li>
+            <li>
+                <a href="notes/表单_操作_语义化.pdf">表单_操作_语义化.pdf</a>
+            </li>
+            <li>
+                <a href="notes/背景音乐.pdf">背景音乐.pdf</a>
+            </li>
+            <li>
+                <a href="notes/JS数组_API函数.pdf">JS数组_API函数.pdf</a>
+            </li>
+            <li>
+                <a href="notes/JS函数_分支结构.pdf">JS函数_分支结构.pdf</a>
+            </li>
+            <li>
+                <a href="notes/JS变量_数据类型.pdf">JS变量_数据类型.pdf</a>
+            </li>
+            <li>
+                <a href="notes/Jqurery.pdf">Jqurery.pdf</a>
+            </li>
+            <li>
+                <a href="notes/JavaScript概述.pdf">JavaScript概述.pdf</a>
+            </li>
+            <li>
+                <a href="notes/html标签.pdf">html标签.pdf</a>
+            </li>
+            <li>
+                <a href="notes/HTML5新增表单.pdf">HTML5新增表单.pdf</a>
+            </li>
+            <li>
+                <a href="notes/html.pdf">html.pdf</a>
+            </li>
+            <li>
+                <a href="notes/DOM.pdf">DOM.pdf</a>
+            </li>
+            <li>
+                <a href="notes/div_ul_ol_table.pdf">div_ul_ol_table.pdf</a>
+            </li>
+            <li>
+                <a href="notes/CSS样式.pdf">CSS样式.pdf</a>
+            </li>
+            <li>
+                <a href="notes/CSS添加视频.pdf">CSS添加视频.pdf</a>
+            </li>
+            <li>
+                <a href="notes/CSS布局与定位.pdf">CSS布局与定位.pdf</a>
+            </li>
+            <li>
+                <a href="notes/CSS3.pdf">CSS3.pdf</a>
+            </li>
+            <li>
+                <a href="notes/CSS_选择器.pdf">CSS_选择器.pdf</a>
+            </li>
+            <li>
+                <a href="notes/BOM.pdf">BOM.pdf</a>
+            </li>
+        </ul>
+    </div>
+    
+
+    <div id="footer">
+        <div id="footerwenzi">
+            <p>211808553李明特结课作品</p>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <script>
+        var mySwiper = new Swiper(".swiper-container",{
+            speed:2000,
+            autoplay:3000,
+            loop:true,
+            autoplayDisableOnInteraction:false,
+            pagination:".swiper-pagination",
+            paginationClickable:true,
+            prevButton:".swiper-button-prev",
+            nextButton:".swiper-button-next",
+    　　　　　　　　　　　effect:"coverflow",//slide(位移切换)，fade(淡入)，cube(方块)，coverflow(3d流)，flip(3D反转)
+        })
+    </script>
+
+    <!-- 前端学习笔记部分 -->
+    <script>
+        $(function(){
+            $('.notes').liMarquee({
+                direction: 'up'
+            });
+        });
+    </script>
+</body>
+
+</html>
